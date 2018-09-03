@@ -1,0 +1,2701 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1cmg3lcr3x1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "100disruptions.json" ;
+	km-dev:modelPublicationTime "1535991526243"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"component\"}],[{\"columnName\":\"message\"}],[{\"columnName\":\"period\"},{\"columnName\":\"expectedEnd\"}],[{\"columnName\":\"cause\"}],[{\"columnName\":\"period\"},{\"columnName\":\"end\"}],[{\"columnName\":\"planned\"}],[{\"columnName\":\"source\"},{\"columnName\":\"organisation\"}],[{\"columnName\":\"location\"},{\"columnName\":\"features\"},{\"columnName\":\"properties\"},{\"columnName\":\"postalCode\"}],[{\"columnName\":\"maintenance\"}],[{\"columnName\":\"lastUpdated\"}],[{\"columnName\":\"location\"},{\"columnName\":\"features\"},{\"columnName\":\"properties\"},{\"columnName\":\"city\"}],[{\"columnName\":\"period\"},{\"columnName\":\"begin\"}],[{\"columnName\":\"titel\"}],[{\"columnName\":\"status\"}],[{\"columnName\":\"period\"},{\"columnName\":\"plannedEnd\"}],[{\"columnName\":\"location\"},{\"columnName\":\"features\"},{\"columnName\":\"properties\"},{\"columnName\":\"street\"}],[{\"columnName\":\"source\"},{\"columnName\":\"timestamp\"}],[{\"columnName\":\"location\"},{\"columnName\":\"features\"},{\"columnName\":\"geometry\"},{\"columnName\":\"coordinates\"}],[{\"columnName\":\"id\"}],[{\"columnName\":\"impact\"},{\"columnName\":\"households\"}],[{\"columnName\":\"period\"},{\"columnName\":\"plannedBegin\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"component\"}],[{\"columnName\":\"message\"}],[{\"columnName\":\"period\"},{\"columnName\":\"expectedEnd\"}],[{\"columnName\":\"cause\"}],[{\"columnName\":\"period\"},{\"columnName\":\"end\"}],[{\"columnName\":\"planned\"}],[{\"columnName\":\"source\"},{\"columnName\":\"organisation\"}],[{\"columnName\":\"location\"},{\"columnName\":\"features\"},{\"columnName\":\"geometry\"},{\"columnName\":\"gmlpoint\"}],[{\"columnName\":\"location\"},{\"columnName\":\"features\"},{\"columnName\":\"properties\"},{\"columnName\":\"postalCode\"}],[{\"columnName\":\"maintenance\"}],[{\"columnName\":\"lastUpdated\"}],[{\"columnName\":\"location\"},{\"columnName\":\"features\"},{\"columnName\":\"properties\"},{\"columnName\":\"city\"}],[{\"columnName\":\"period\"},{\"columnName\":\"begin\"}],[{\"columnName\":\"titel\"}],[{\"columnName\":\"status\"}],[{\"columnName\":\"period\"},{\"columnName\":\"plannedEnd\"}],[{\"columnName\":\"location\"},{\"columnName\":\"features\"},{\"columnName\":\"properties\"},{\"columnName\":\"street\"}],[{\"columnName\":\"source\"},{\"columnName\":\"timestamp\"}],[{\"columnName\":\"id\"}],[{\"columnName\":\"impact\"},{\"columnName\":\"households\"}],[{\"columnName\":\"period\"},{\"columnName\":\"plannedBegin\"}]]" ;
+	km-dev:hasModelLabel "disruption2outage" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"features\"},
+                    {\"columnName\": \"geometry\"},
+                    {\"columnName\": \"coordinates\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"gmlpoint\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return \\\"<gml:Point><gml:pos>\\\"+getValue(\\\"coordinates\\\")[12:29]+\\\" \\\"+getValue(\\\"coordinates\\\")[31+12:48+12]+\\\"<\\/gml:pos><\\/gml:Point>\\\"\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"features\\\"},{\\\"columnName\\\":\\\"geometry\\\"},{\\\"columnName\\\":\\\"coordinates\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"features\\\"},{\\\"columnName\\\":\\\"geometry\\\"},{\\\"columnName\\\":\\\"gmlpoint\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetWorksheetPropertiesCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"properties\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": false,
+                    \"hasGithubURL\": true,
+                    \"GithubURL\": \"https://github.com/annakosek/karma/tree/master/gen\",
+                    \"baseURI\": \"\",
+                    \"hasPrefix\": false,
+                    \"hasServiceProperties\": false
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetWorksheetPropertiesCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"properties\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"graphLabel\": \"disruption2outage\",
+                    \"hasBaseURI\": false,
+                    \"hasPrefix\": false,
+                    \"hasServiceProperties\": false
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"cause\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Operations.Outage\",
+                    \"DomainId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#Outage.cause\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Operations.Outage/Operations.Outage1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"cause\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"cause\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"id\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"urn:default:baseUri:#Operations.Outage\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"urn:default:baseUri:#Operations.Outage1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Operations.Outage\",
+                    \"DomainId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Operations.Outage/Operations.Outage1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"id\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"id\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"component\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Core.Equipment\",
+                    \"DomainId\": \"urn:default:baseUri:#Core.Equipment1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#IdentifiedObject.name\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Core.Equipment/Core.Equipment1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"component\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"component\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"impact\"},
+                    {\"columnName\": \"households\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Operations.ServicePointOutageSummary\",
+                    \"DomainId\": \"urn:default:baseUri:#Operations.ServicePointOutageSummary1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#ServicePointOutageSummary.totalCount\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Operations.ServicePointOutageSummary/Operations.ServicePointOutageSummary1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"impact\\\"},{\\\"columnName\\\":\\\"households\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"impact\\\"},{\\\"columnName\\\":\\\"households\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"lastUpdated\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Operations.Outage\",
+                    \"DomainId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#Document.lastModifiedDateTime\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Operations.Outage/Operations.Outage1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"lastUpdated\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"lastUpdated\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"features\"},
+                    {\"columnName\": \"properties\"},
+                    {\"columnName\": \"city\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Common.TownDetail\",
+                    \"DomainId\": \"urn:default:baseUri:#Common.TownDetail1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#TownDetail.name\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Common.TownDetail/Common.TownDetail1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"features\\\"},{\\\"columnName\\\":\\\"properties\\\"},{\\\"columnName\\\":\\\"city\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"features\\\"},{\\\"columnName\\\":\\\"properties\\\"},{\\\"columnName\\\":\\\"city\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"features\"},
+                    {\"columnName\": \"properties\"},
+                    {\"columnName\": \"postalCode\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Common.StreetAddress\",
+                    \"DomainId\": \"urn:default:baseUri:#Common.StreetAddress1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#StreetAddress.postalCode\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Common.StreetAddress/Common.StreetAddress1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"features\\\"},{\\\"columnName\\\":\\\"properties\\\"},{\\\"columnName\\\":\\\"postalCode\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"features\\\"},{\\\"columnName\\\":\\\"properties\\\"},{\\\"columnName\\\":\\\"postalCode\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"features\"},
+                    {\"columnName\": \"properties\"},
+                    {\"columnName\": \"street\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Common.StreetDetail\",
+                    \"DomainId\": \"urn:default:baseUri:#Common.StreetDetail1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#StreetDetail.name\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Common.StreetDetail/Common.StreetDetail1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"features\\\"},{\\\"columnName\\\":\\\"properties\\\"},{\\\"columnName\\\":\\\"street\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"features\\\"},{\\\"columnName\\\":\\\"properties\\\"},{\\\"columnName\\\":\\\"street\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"maintenance\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Operations.Outage\",
+                    \"DomainId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#Outage.isPlanned\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Operations.Outage/Operations.Outage1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"maintenance\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"maintenance\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"message\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Operations.Outage\",
+                    \"DomainId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#IdentifiedObject.description\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Operations.Outage/Operations.Outage1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"message\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"message\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"period\"},
+                    {\"columnName\": \"begin\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Domain.DateTimeInterval\",
+                    \"DomainId\": \"urn:default:baseUri:#Domain.DateTimeInterval1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#DateTimeInterval.start\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Domain.DateTimeInterval/Domain.DateTimeInterval1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"period\\\"},{\\\"columnName\\\":\\\"begin\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"period\\\"},{\\\"columnName\\\":\\\"begin\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"period\"},
+                    {\"columnName\": \"end\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Domain.DateTimeInterval\",
+                    \"DomainId\": \"urn:default:baseUri:#Domain.DateTimeInterval1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#DateTimeInterval.end\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Domain.DateTimeInterval/Domain.DateTimeInterval1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"period\\\"},{\\\"columnName\\\":\\\"end\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"period\\\"},{\\\"columnName\\\":\\\"end\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"period\"},
+                    {\"columnName\": \"expectedEnd\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Domain.DateTimeInterval\",
+                    \"DomainId\": \"urn:default:baseUri:#Domain.DateTimeInterval2\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#DateTimeInterval.end\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Domain.DateTimeInterval/Domain.DateTimeInterval2 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"period\\\"},{\\\"columnName\\\":\\\"expectedEnd\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"period\\\"},{\\\"columnName\\\":\\\"expectedEnd\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"period\"},
+                    {\"columnName\": \"plannedEnd\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Domain.DateTimeInterval\",
+                    \"DomainId\": \"urn:default:baseUri:#Domain.DateTimeInterval2\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#DateTimeInterval.end\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Domain.DateTimeInterval/Domain.DateTimeInterval2\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"period\\\"},{\\\"columnName\\\":\\\"plannedEnd\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"period\\\"},{\\\"columnName\\\":\\\"plannedEnd\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"period\"},
+                    {\"columnName\": \"plannedBegin\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Domain.DateTimeInterval\",
+                    \"DomainId\": \"urn:default:baseUri:#Domain.DateTimeInterval2\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#DateTimeInterval.start\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Domain.DateTimeInterval/Domain.DateTimeInterval2\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"period\\\"},{\\\"columnName\\\":\\\"plannedBegin\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"period\\\"},{\\\"columnName\\\":\\\"plannedBegin\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"planned\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Operations.Outage\",
+                    \"DomainId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#Outage.isPlanned\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Operations.Outage/Operations.Outage1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"planned\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"planned\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"source\"},
+                    {\"columnName\": \"organisation\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#PaymentMetering.ServiceSupplier\",
+                    \"DomainId\": \"urn:default:baseUri:#PaymentMetering.ServiceSupplier1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#IdentifiedObject.name\",
+                    \"DomainLabel\": \"urn:default:baseUri:#PaymentMetering.ServiceSupplier/PaymentMetering.ServiceSupplier1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"source\\\"},{\\\"columnName\\\":\\\"organisation\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"source\\\"},{\\\"columnName\\\":\\\"organisation\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"source\"},
+                    {\"columnName\": \"timestamp\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Operations.Outage\",
+                    \"DomainId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#Document.createdDateTime\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Operations.Outage/Operations.Outage1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"source\\\"},{\\\"columnName\\\":\\\"timestamp\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"source\\\"},{\\\"columnName\\\":\\\"timestamp\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"status\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Common.Status\",
+                    \"DomainId\": \"urn:default:baseUri:#Common.Status1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#Status.value\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Common.Status/Common.Status1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"status\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"status\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"titel\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"urn:default:baseUri:#Operations.Outage\",
+                    \"DomainId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"urn:default:baseUri:#Document.title\",
+                    \"DomainLabel\": \"urn:default:baseUri:#Operations.Outage/Operations.Outage1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"titel\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"titel\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [
+                    {\"columnName\": \"location\"},
+                    {\"columnName\": \"features\"},
+                    {\"columnName\": \"geometry\"},
+                    {\"columnName\": \"gmlpoint\"}
+                ]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.opengis.net/ont/sf#Point\",
+                    \"DomainId\": \"http://www.opengis.net/ont/sf#Point1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.opengis.net/ont/geosparql#asGML\",
+                    \"DomainLabel\": \"http://www.opengis.net/ont/sf#Point/Point1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"features\\\"},{\\\"columnName\\\":\\\"geometry\\\"},{\\\"columnName\\\":\\\"gmlpoint\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"location\\\"},{\\\"columnName\\\":\\\"features\\\"},{\\\"columnName\\\":\\\"geometry\\\"},{\\\"columnName\\\":\\\"gmlpoint\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#Core.Equipment1\",
+                    \"edgeId\": \"http://www.purl.org/EnergyAlert/ExtensionOntology#Outage_Equipments\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#Core.Equipment\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Operations.Outage\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#Operations.ServicePointOutageSummary1\",
+                    \"edgeId\": \"urn:default:baseUri:#Outage.summary\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#Operations.ServicePointOutageSummary\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Operations.Outage\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#Common.TownDetail1\",
+                    \"edgeId\": \"urn:default:baseUri:#StreetAddress.townDetail\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#Common.TownDetail\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Common.Location1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Common.Location\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#Common.Location1\",
+                    \"edgeId\": \"http://www.purl.org/EnergyAlert/ExtensionOntology#Incident_Location\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#Common.Location\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Operations.Incident1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Operations.Incident\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#Operations.Incident1\",
+                    \"edgeId\": \"urn:default:baseUri:#Outage_Incident\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#Operations.Incident\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Operations.Outage\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#Common.StreetAddress1\",
+                    \"edgeId\": \"urn:default:baseUri:#Location.mainAddress\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#Common.StreetAddress\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Common.Location1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Common.Location\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#Common.StreetDetail1\",
+                    \"edgeId\": \"urn:default:baseUri:#StreetAddress.streetDetail\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#Common.StreetDetail\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Common.StreetAddress1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Common.StreetAddress\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#Domain.DateTimeInterval1\",
+                    \"edgeId\": \"urn:default:baseUri:#Outage.actualPeriod\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#Domain.DateTimeInterval\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Operations.Outage\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#Domain.DateTimeInterval2\",
+                    \"edgeId\": \"urn:default:baseUri:#Outage.estimatedPeriod\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#Domain.DateTimeInterval\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Operations.Outage\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#PaymentMetering.ServiceSupplier1\",
+                    \"edgeId\": \"http://www.purl.org/EnergyAlert/ExtensionOntology#Outage_ServiceSupplier\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#PaymentMetering.ServiceSupplier\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Operations.Outage\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"urn:default:baseUri:#Common.Status1\",
+                    \"edgeId\": \"urn:default:baseUri:#Document.status\",
+                    \"edgeTargetUri\": \"urn:default:baseUri:#Common.Status\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Operations.Outage\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.opengis.net/ont/sf#Point1\",
+                    \"edgeId\": \"http://www.opengis.net/ont/geosparql#hasGeometry\",
+                    \"edgeTargetUri\": \"http://www.opengis.net/ont/sf#Point\",
+                    \"edgeSourceId\": \"urn:default:baseUri:#Operations.Outage1\",
+                    \"edgeSourceUri\": \"urn:default:baseUri:#Operations.Outage\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_5292550e-ba0e-4848-a3ec-b2a18a64e4ff a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_5292550e-ba0e-4848-a3ec-b2a18a64e4ff .
+
+km-dev:TriplesMap_5292550e-ba0e-4848-a3ec-b2a18a64e4ff km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x2 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x2 .
+
+km-dev:TriplesMap_5292550e-ba0e-4848-a3ec-b2a18a64e4ff rr:logicalTable _:node1cmg3lcr3x2 ;
+	rr:subjectMap _:node1cmg3lcr3x3 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x3 .
+
+_:node1cmg3lcr3x3 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Common.Location1" ;
+	rr:class <urn:default:baseUri:#Common.Location> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Common.Location1" .
+
+km-dev:PredicateObjectMap_45e87695-122f-42c2-a4cf-f1c6f805e358 rr:predicate <urn:default:baseUri:#Location.mainAddress> .
+
+km-dev:RefObjectMap_1ef0a883-9747-4fc8-83bd-c3167eb50d78 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_b0923aa8-a19d-490b-b87f-631ccc1c42d2 ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_1ef0a883-9747-4fc8-83bd-c3167eb50d78 .
+
+km-dev:PredicateObjectMap_45e87695-122f-42c2-a4cf-f1c6f805e358 rr:objectMap km-dev:RefObjectMap_1ef0a883-9747-4fc8-83bd-c3167eb50d78 .
+
+km-dev:TriplesMap_5292550e-ba0e-4848-a3ec-b2a18a64e4ff rr:predicateObjectMap km-dev:PredicateObjectMap_45e87695-122f-42c2-a4cf-f1c6f805e358 .
+
+km-dev:PredicateObjectMap_45e87695-122f-42c2-a4cf-f1c6f805e358 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_45e87695-122f-42c2-a4cf-f1c6f805e358 .
+
+km-dev:PredicateObjectMap_4cec6acb-6036-4b7f-bb55-220c93f94b24 rr:predicate <urn:default:baseUri:#StreetAddress.townDetail> .
+
+km-dev:RefObjectMap_165b0f3b-8a10-47e8-bb5b-81facb809dde a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_5638f004-607c-442d-bc21-753c84f9eb63 ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_165b0f3b-8a10-47e8-bb5b-81facb809dde .
+
+km-dev:PredicateObjectMap_4cec6acb-6036-4b7f-bb55-220c93f94b24 rr:objectMap km-dev:RefObjectMap_165b0f3b-8a10-47e8-bb5b-81facb809dde .
+
+km-dev:TriplesMap_5292550e-ba0e-4848-a3ec-b2a18a64e4ff rr:predicateObjectMap km-dev:PredicateObjectMap_4cec6acb-6036-4b7f-bb55-220c93f94b24 .
+
+km-dev:PredicateObjectMap_4cec6acb-6036-4b7f-bb55-220c93f94b24 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_4cec6acb-6036-4b7f-bb55-220c93f94b24 .
+
+km-dev:TriplesMap_b0923aa8-a19d-490b-b87f-631ccc1c42d2 a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_b0923aa8-a19d-490b-b87f-631ccc1c42d2 .
+
+km-dev:TriplesMap_b0923aa8-a19d-490b-b87f-631ccc1c42d2 km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x4 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x4 .
+
+km-dev:TriplesMap_b0923aa8-a19d-490b-b87f-631ccc1c42d2 rr:logicalTable _:node1cmg3lcr3x4 ;
+	rr:subjectMap _:node1cmg3lcr3x5 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x5 .
+
+_:node1cmg3lcr3x5 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Common.StreetAddress1" ;
+	rr:class <urn:default:baseUri:#Common.StreetAddress> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Common.StreetAddress1" .
+
+km-dev:PredicateObjectMap_8d404932-cbf5-48ba-9bef-4c3bc8a0c7e4 rr:predicate <urn:default:baseUri:#StreetAddress.streetDetail> .
+
+km-dev:RefObjectMap_a6c9c5a6-6f11-438a-b4b3-eec2d3cda088 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_ac040c83-2795-41cb-9e3d-cc012d32de0e ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_a6c9c5a6-6f11-438a-b4b3-eec2d3cda088 .
+
+km-dev:PredicateObjectMap_8d404932-cbf5-48ba-9bef-4c3bc8a0c7e4 rr:objectMap km-dev:RefObjectMap_a6c9c5a6-6f11-438a-b4b3-eec2d3cda088 .
+
+km-dev:TriplesMap_b0923aa8-a19d-490b-b87f-631ccc1c42d2 rr:predicateObjectMap km-dev:PredicateObjectMap_8d404932-cbf5-48ba-9bef-4c3bc8a0c7e4 .
+
+km-dev:PredicateObjectMap_8d404932-cbf5-48ba-9bef-4c3bc8a0c7e4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_8d404932-cbf5-48ba-9bef-4c3bc8a0c7e4 .
+
+km-dev:PredicateObjectMap_036bbd53-621b-4d8d-a446-ab028602e7b0 rr:predicate <urn:default:baseUri:#StreetAddress.postalCode> .
+
+_:node1cmg3lcr3x6 rr:column "[\"location\",\"features\",\"properties\",\"postalCode\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x6 .
+
+km-dev:PredicateObjectMap_036bbd53-621b-4d8d-a446-ab028602e7b0 rr:objectMap _:node1cmg3lcr3x6 .
+
+km-dev:TriplesMap_b0923aa8-a19d-490b-b87f-631ccc1c42d2 rr:predicateObjectMap km-dev:PredicateObjectMap_036bbd53-621b-4d8d-a446-ab028602e7b0 .
+
+km-dev:PredicateObjectMap_036bbd53-621b-4d8d-a446-ab028602e7b0 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_036bbd53-621b-4d8d-a446-ab028602e7b0 .
+
+km-dev:TriplesMap_5638f004-607c-442d-bc21-753c84f9eb63 a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_5638f004-607c-442d-bc21-753c84f9eb63 .
+
+km-dev:TriplesMap_5638f004-607c-442d-bc21-753c84f9eb63 km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x7 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x7 .
+
+km-dev:TriplesMap_5638f004-607c-442d-bc21-753c84f9eb63 rr:logicalTable _:node1cmg3lcr3x7 ;
+	rr:subjectMap _:node1cmg3lcr3x8 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x8 .
+
+_:node1cmg3lcr3x8 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Common.TownDetail1" ;
+	rr:class <urn:default:baseUri:#Common.TownDetail> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Common.TownDetail1" .
+
+km-dev:PredicateObjectMap_f14d9717-2aa6-41f5-9839-9c8ff6ec81dc rr:predicate <urn:default:baseUri:#TownDetail.name> .
+
+_:node1cmg3lcr3x9 rr:column "[\"location\",\"features\",\"properties\",\"city\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x9 .
+
+km-dev:PredicateObjectMap_f14d9717-2aa6-41f5-9839-9c8ff6ec81dc rr:objectMap _:node1cmg3lcr3x9 .
+
+km-dev:TriplesMap_5638f004-607c-442d-bc21-753c84f9eb63 rr:predicateObjectMap km-dev:PredicateObjectMap_f14d9717-2aa6-41f5-9839-9c8ff6ec81dc .
+
+km-dev:PredicateObjectMap_f14d9717-2aa6-41f5-9839-9c8ff6ec81dc a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f14d9717-2aa6-41f5-9839-9c8ff6ec81dc .
+
+km-dev:TriplesMap_ac040c83-2795-41cb-9e3d-cc012d32de0e a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_ac040c83-2795-41cb-9e3d-cc012d32de0e .
+
+km-dev:TriplesMap_ac040c83-2795-41cb-9e3d-cc012d32de0e km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x10 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x10 .
+
+km-dev:TriplesMap_ac040c83-2795-41cb-9e3d-cc012d32de0e rr:logicalTable _:node1cmg3lcr3x10 ;
+	rr:subjectMap _:node1cmg3lcr3x11 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x11 .
+
+_:node1cmg3lcr3x11 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Common.StreetDetail1" ;
+	rr:class <urn:default:baseUri:#Common.StreetDetail> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Common.StreetDetail1" .
+
+km-dev:PredicateObjectMap_3f34bedc-c3c8-47ba-b923-ff083963a0b7 rr:predicate <urn:default:baseUri:#StreetDetail.name> .
+
+_:node1cmg3lcr3x12 rr:column "[\"location\",\"features\",\"properties\",\"street\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x12 .
+
+km-dev:PredicateObjectMap_3f34bedc-c3c8-47ba-b923-ff083963a0b7 rr:objectMap _:node1cmg3lcr3x12 .
+
+km-dev:TriplesMap_ac040c83-2795-41cb-9e3d-cc012d32de0e rr:predicateObjectMap km-dev:PredicateObjectMap_3f34bedc-c3c8-47ba-b923-ff083963a0b7 .
+
+km-dev:PredicateObjectMap_3f34bedc-c3c8-47ba-b923-ff083963a0b7 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3f34bedc-c3c8-47ba-b923-ff083963a0b7 .
+
+km-dev:TriplesMap_0d8f3f7f-344e-48ff-862c-8efa330d8088 a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_0d8f3f7f-344e-48ff-862c-8efa330d8088 .
+
+km-dev:TriplesMap_0d8f3f7f-344e-48ff-862c-8efa330d8088 km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x13 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x13 .
+
+km-dev:TriplesMap_0d8f3f7f-344e-48ff-862c-8efa330d8088 rr:logicalTable _:node1cmg3lcr3x13 ;
+	rr:subjectMap _:node1cmg3lcr3x14 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x14 .
+
+_:node1cmg3lcr3x14 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Operations.Incident1" ;
+	rr:class <urn:default:baseUri:#Operations.Incident> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Operations.Incident1" .
+
+km-dev:PredicateObjectMap_823ff7d6-59d5-48d3-958b-42aaf6f5aac6 rr:predicate <http://www.purl.org/EnergyAlert/ExtensionOntology#Incident_Location> .
+
+km-dev:RefObjectMap_149f3e22-54f8-438d-bc5f-95c820b1d0c1 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_5292550e-ba0e-4848-a3ec-b2a18a64e4ff ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_149f3e22-54f8-438d-bc5f-95c820b1d0c1 .
+
+km-dev:PredicateObjectMap_823ff7d6-59d5-48d3-958b-42aaf6f5aac6 rr:objectMap km-dev:RefObjectMap_149f3e22-54f8-438d-bc5f-95c820b1d0c1 .
+
+km-dev:TriplesMap_0d8f3f7f-344e-48ff-862c-8efa330d8088 rr:predicateObjectMap km-dev:PredicateObjectMap_823ff7d6-59d5-48d3-958b-42aaf6f5aac6 .
+
+km-dev:PredicateObjectMap_823ff7d6-59d5-48d3-958b-42aaf6f5aac6 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_823ff7d6-59d5-48d3-958b-42aaf6f5aac6 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x15 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x15 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:logicalTable _:node1cmg3lcr3x15 ;
+	rr:subjectMap _:node1cmg3lcr3x16 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x16 .
+
+_:node1cmg3lcr3x16 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Operations.Outage1" ;
+	rr:class <urn:default:baseUri:#Operations.Outage> ;
+	rr:template "{id}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_da2fd1db-16ce-430e-9382-5dcdaf95d8e2 rr:predicate <http://www.opengis.net/ont/geosparql#hasGeometry> .
+
+km-dev:RefObjectMap_ce8b4008-6b1c-4953-b811-e1b2c3850e27 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_960963d9-920c-4b76-882a-91b551d45deb ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_ce8b4008-6b1c-4953-b811-e1b2c3850e27 .
+
+km-dev:PredicateObjectMap_da2fd1db-16ce-430e-9382-5dcdaf95d8e2 rr:objectMap km-dev:RefObjectMap_ce8b4008-6b1c-4953-b811-e1b2c3850e27 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_da2fd1db-16ce-430e-9382-5dcdaf95d8e2 .
+
+km-dev:PredicateObjectMap_da2fd1db-16ce-430e-9382-5dcdaf95d8e2 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_da2fd1db-16ce-430e-9382-5dcdaf95d8e2 .
+
+km-dev:PredicateObjectMap_b90c849e-ecac-4301-9db1-72befec614a9 rr:predicate <urn:default:baseUri:#Document.status> .
+
+km-dev:RefObjectMap_c6760017-4b2f-413b-b0b0-2695a5021463 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_fe1be2ac-fcb9-4dcc-9220-909884ec84dc ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_c6760017-4b2f-413b-b0b0-2695a5021463 .
+
+km-dev:PredicateObjectMap_b90c849e-ecac-4301-9db1-72befec614a9 rr:objectMap km-dev:RefObjectMap_c6760017-4b2f-413b-b0b0-2695a5021463 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_b90c849e-ecac-4301-9db1-72befec614a9 .
+
+km-dev:PredicateObjectMap_b90c849e-ecac-4301-9db1-72befec614a9 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b90c849e-ecac-4301-9db1-72befec614a9 .
+
+km-dev:PredicateObjectMap_54cdd3f1-4c86-46f8-825f-ff5f61df6545 rr:predicate <http://www.purl.org/EnergyAlert/ExtensionOntology#Outage_Equipments> .
+
+km-dev:RefObjectMap_d8174d0b-92ed-441c-bce2-76b45a7990d6 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_4a0d62ce-cca2-4a2a-94c9-5bf69a5b10cf ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_d8174d0b-92ed-441c-bce2-76b45a7990d6 .
+
+km-dev:PredicateObjectMap_54cdd3f1-4c86-46f8-825f-ff5f61df6545 rr:objectMap km-dev:RefObjectMap_d8174d0b-92ed-441c-bce2-76b45a7990d6 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_54cdd3f1-4c86-46f8-825f-ff5f61df6545 .
+
+km-dev:PredicateObjectMap_54cdd3f1-4c86-46f8-825f-ff5f61df6545 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_54cdd3f1-4c86-46f8-825f-ff5f61df6545 .
+
+km-dev:PredicateObjectMap_b55af249-712c-496e-8fd6-671a8654cf35 rr:predicate <urn:default:baseUri:#Outage.actualPeriod> .
+
+km-dev:RefObjectMap_0c9ac16d-2307-4141-a87b-db5e77b0f37e a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_2b8a94c9-eec7-4fe2-8218-bab42f790e93 ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_0c9ac16d-2307-4141-a87b-db5e77b0f37e .
+
+km-dev:PredicateObjectMap_b55af249-712c-496e-8fd6-671a8654cf35 rr:objectMap km-dev:RefObjectMap_0c9ac16d-2307-4141-a87b-db5e77b0f37e .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_b55af249-712c-496e-8fd6-671a8654cf35 .
+
+km-dev:PredicateObjectMap_b55af249-712c-496e-8fd6-671a8654cf35 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b55af249-712c-496e-8fd6-671a8654cf35 .
+
+km-dev:PredicateObjectMap_ac503c81-ca54-44d8-b0c8-e735d52e1582 rr:predicate <urn:default:baseUri:#Outage.estimatedPeriod> .
+
+km-dev:RefObjectMap_2726a776-d721-45e2-9a88-7d0e45fc32c2 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_efebf73f-9eee-440d-ab29-4f210bac8653 ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_2726a776-d721-45e2-9a88-7d0e45fc32c2 .
+
+km-dev:PredicateObjectMap_ac503c81-ca54-44d8-b0c8-e735d52e1582 rr:objectMap km-dev:RefObjectMap_2726a776-d721-45e2-9a88-7d0e45fc32c2 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_ac503c81-ca54-44d8-b0c8-e735d52e1582 .
+
+km-dev:PredicateObjectMap_ac503c81-ca54-44d8-b0c8-e735d52e1582 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ac503c81-ca54-44d8-b0c8-e735d52e1582 .
+
+km-dev:PredicateObjectMap_c195b9a0-5e4f-40fe-8990-882c1193ad2a rr:predicate <urn:default:baseUri:#Outage_Incident> .
+
+km-dev:RefObjectMap_ba023907-1bbb-41a4-97bd-5048430f7dbc a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_0d8f3f7f-344e-48ff-862c-8efa330d8088 ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_ba023907-1bbb-41a4-97bd-5048430f7dbc .
+
+km-dev:PredicateObjectMap_c195b9a0-5e4f-40fe-8990-882c1193ad2a rr:objectMap km-dev:RefObjectMap_ba023907-1bbb-41a4-97bd-5048430f7dbc .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_c195b9a0-5e4f-40fe-8990-882c1193ad2a .
+
+km-dev:PredicateObjectMap_c195b9a0-5e4f-40fe-8990-882c1193ad2a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c195b9a0-5e4f-40fe-8990-882c1193ad2a .
+
+km-dev:PredicateObjectMap_8bd7d83e-6e84-4601-bbe3-597a43253ae4 rr:predicate <urn:default:baseUri:#Outage.summary> .
+
+km-dev:RefObjectMap_1f436880-4a2d-4a46-96f9-869885aab0ea a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_68039747-b10e-42a0-bb12-661cca96aa6f ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_1f436880-4a2d-4a46-96f9-869885aab0ea .
+
+km-dev:PredicateObjectMap_8bd7d83e-6e84-4601-bbe3-597a43253ae4 rr:objectMap km-dev:RefObjectMap_1f436880-4a2d-4a46-96f9-869885aab0ea .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_8bd7d83e-6e84-4601-bbe3-597a43253ae4 .
+
+km-dev:PredicateObjectMap_8bd7d83e-6e84-4601-bbe3-597a43253ae4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_8bd7d83e-6e84-4601-bbe3-597a43253ae4 .
+
+km-dev:PredicateObjectMap_c34d2617-ea72-45c3-80a4-ec2ebff1cf8d rr:predicate <http://www.purl.org/EnergyAlert/ExtensionOntology#Outage_ServiceSupplier> .
+
+km-dev:RefObjectMap_d180eb08-4bdc-4b7c-a735-9981b500d12b a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_e510ea0d-1dd7-4851-9a86-b2abd4c79ddc ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap km-dev:RefObjectMap_d180eb08-4bdc-4b7c-a735-9981b500d12b .
+
+km-dev:PredicateObjectMap_c34d2617-ea72-45c3-80a4-ec2ebff1cf8d rr:objectMap km-dev:RefObjectMap_d180eb08-4bdc-4b7c-a735-9981b500d12b .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_c34d2617-ea72-45c3-80a4-ec2ebff1cf8d .
+
+km-dev:PredicateObjectMap_c34d2617-ea72-45c3-80a4-ec2ebff1cf8d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c34d2617-ea72-45c3-80a4-ec2ebff1cf8d .
+
+km-dev:PredicateObjectMap_b28c7a19-6eb4-4fd5-8394-23104d09ef1d rr:predicate <urn:default:baseUri:#IdentifiedObject.description> .
+
+_:node1cmg3lcr3x17 rr:column "message" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x17 .
+
+km-dev:PredicateObjectMap_b28c7a19-6eb4-4fd5-8394-23104d09ef1d rr:objectMap _:node1cmg3lcr3x17 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_b28c7a19-6eb4-4fd5-8394-23104d09ef1d .
+
+km-dev:PredicateObjectMap_b28c7a19-6eb4-4fd5-8394-23104d09ef1d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b28c7a19-6eb4-4fd5-8394-23104d09ef1d .
+
+km-dev:PredicateObjectMap_277350a1-9fdd-45ef-8281-8892f97c1422 rr:predicate <urn:default:baseUri:#Outage.cause> .
+
+_:node1cmg3lcr3x18 rr:column "cause" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x18 .
+
+km-dev:PredicateObjectMap_277350a1-9fdd-45ef-8281-8892f97c1422 rr:objectMap _:node1cmg3lcr3x18 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_277350a1-9fdd-45ef-8281-8892f97c1422 .
+
+km-dev:PredicateObjectMap_277350a1-9fdd-45ef-8281-8892f97c1422 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_277350a1-9fdd-45ef-8281-8892f97c1422 .
+
+km-dev:PredicateObjectMap_1e7383d0-d9e5-4a47-89fe-ab5a371d3865 rr:predicate <urn:default:baseUri:#Outage.isPlanned> .
+
+_:node1cmg3lcr3x19 rr:column "planned" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x19 .
+
+km-dev:PredicateObjectMap_1e7383d0-d9e5-4a47-89fe-ab5a371d3865 rr:objectMap _:node1cmg3lcr3x19 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_1e7383d0-d9e5-4a47-89fe-ab5a371d3865 .
+
+km-dev:PredicateObjectMap_1e7383d0-d9e5-4a47-89fe-ab5a371d3865 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1e7383d0-d9e5-4a47-89fe-ab5a371d3865 .
+
+km-dev:PredicateObjectMap_c1913dc2-4420-4e79-90ef-6221b92d5d83 rr:predicate <urn:default:baseUri:#Outage.isPlanned> .
+
+_:node1cmg3lcr3x20 rr:column "maintenance" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x20 .
+
+km-dev:PredicateObjectMap_c1913dc2-4420-4e79-90ef-6221b92d5d83 rr:objectMap _:node1cmg3lcr3x20 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_c1913dc2-4420-4e79-90ef-6221b92d5d83 .
+
+km-dev:PredicateObjectMap_c1913dc2-4420-4e79-90ef-6221b92d5d83 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c1913dc2-4420-4e79-90ef-6221b92d5d83 .
+
+km-dev:PredicateObjectMap_0f0d0508-871b-4777-88d3-1aced7294714 rr:predicate <urn:default:baseUri:#Document.lastModifiedDateTime> .
+
+_:node1cmg3lcr3x21 rr:column "lastUpdated" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x21 .
+
+km-dev:PredicateObjectMap_0f0d0508-871b-4777-88d3-1aced7294714 rr:objectMap _:node1cmg3lcr3x21 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_0f0d0508-871b-4777-88d3-1aced7294714 .
+
+km-dev:PredicateObjectMap_0f0d0508-871b-4777-88d3-1aced7294714 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0f0d0508-871b-4777-88d3-1aced7294714 .
+
+km-dev:PredicateObjectMap_66f97439-130d-49d4-a9d4-651ee2a1e025 rr:predicate <urn:default:baseUri:#Document.title> .
+
+_:node1cmg3lcr3x22 rr:column "titel" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x22 .
+
+km-dev:PredicateObjectMap_66f97439-130d-49d4-a9d4-651ee2a1e025 rr:objectMap _:node1cmg3lcr3x22 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_66f97439-130d-49d4-a9d4-651ee2a1e025 .
+
+km-dev:PredicateObjectMap_66f97439-130d-49d4-a9d4-651ee2a1e025 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_66f97439-130d-49d4-a9d4-651ee2a1e025 .
+
+km-dev:PredicateObjectMap_94aae06c-382b-4ff5-bff0-420757bb2c9f rr:predicate <urn:default:baseUri:#Document.createdDateTime> .
+
+_:node1cmg3lcr3x23 rr:column "[\"source\",\"timestamp\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x23 .
+
+km-dev:PredicateObjectMap_94aae06c-382b-4ff5-bff0-420757bb2c9f rr:objectMap _:node1cmg3lcr3x23 .
+
+km-dev:TriplesMap_948371fa-c285-43a9-8754-176ce349054f rr:predicateObjectMap km-dev:PredicateObjectMap_94aae06c-382b-4ff5-bff0-420757bb2c9f .
+
+km-dev:PredicateObjectMap_94aae06c-382b-4ff5-bff0-420757bb2c9f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_94aae06c-382b-4ff5-bff0-420757bb2c9f .
+
+km-dev:TriplesMap_960963d9-920c-4b76-882a-91b551d45deb a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_960963d9-920c-4b76-882a-91b551d45deb .
+
+km-dev:TriplesMap_960963d9-920c-4b76-882a-91b551d45deb km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x24 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x24 .
+
+km-dev:TriplesMap_960963d9-920c-4b76-882a-91b551d45deb rr:logicalTable _:node1cmg3lcr3x24 ;
+	rr:subjectMap _:node1cmg3lcr3x25 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x25 .
+
+_:node1cmg3lcr3x25 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.opengis.net/ont/sf#Point1" ;
+	rr:class <http://www.opengis.net/ont/sf#Point> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Point1" .
+
+km-dev:PredicateObjectMap_2610eb6b-4f6c-4879-bb69-6e12c75b3f75 rr:predicate <http://www.opengis.net/ont/geosparql#asGML> .
+
+_:node1cmg3lcr3x26 rr:column "[\"location\",\"features\",\"geometry\",\"gmlpoint\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x26 .
+
+km-dev:PredicateObjectMap_2610eb6b-4f6c-4879-bb69-6e12c75b3f75 rr:objectMap _:node1cmg3lcr3x26 .
+
+km-dev:TriplesMap_960963d9-920c-4b76-882a-91b551d45deb rr:predicateObjectMap km-dev:PredicateObjectMap_2610eb6b-4f6c-4879-bb69-6e12c75b3f75 .
+
+km-dev:PredicateObjectMap_2610eb6b-4f6c-4879-bb69-6e12c75b3f75 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_2610eb6b-4f6c-4879-bb69-6e12c75b3f75 .
+
+km-dev:TriplesMap_fe1be2ac-fcb9-4dcc-9220-909884ec84dc a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_fe1be2ac-fcb9-4dcc-9220-909884ec84dc .
+
+km-dev:TriplesMap_fe1be2ac-fcb9-4dcc-9220-909884ec84dc km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x27 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x27 .
+
+km-dev:TriplesMap_fe1be2ac-fcb9-4dcc-9220-909884ec84dc rr:logicalTable _:node1cmg3lcr3x27 ;
+	rr:subjectMap _:node1cmg3lcr3x28 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x28 .
+
+_:node1cmg3lcr3x28 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Common.Status1" ;
+	rr:class <urn:default:baseUri:#Common.Status> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Common.Status1" .
+
+km-dev:PredicateObjectMap_d04c0393-a1f1-4e6d-ab49-9bda4bbd1233 rr:predicate <urn:default:baseUri:#Status.value> .
+
+_:node1cmg3lcr3x29 rr:column "status" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x29 .
+
+km-dev:PredicateObjectMap_d04c0393-a1f1-4e6d-ab49-9bda4bbd1233 rr:objectMap _:node1cmg3lcr3x29 .
+
+km-dev:TriplesMap_fe1be2ac-fcb9-4dcc-9220-909884ec84dc rr:predicateObjectMap km-dev:PredicateObjectMap_d04c0393-a1f1-4e6d-ab49-9bda4bbd1233 .
+
+km-dev:PredicateObjectMap_d04c0393-a1f1-4e6d-ab49-9bda4bbd1233 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d04c0393-a1f1-4e6d-ab49-9bda4bbd1233 .
+
+km-dev:TriplesMap_4a0d62ce-cca2-4a2a-94c9-5bf69a5b10cf a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_4a0d62ce-cca2-4a2a-94c9-5bf69a5b10cf .
+
+km-dev:TriplesMap_4a0d62ce-cca2-4a2a-94c9-5bf69a5b10cf km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x30 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x30 .
+
+km-dev:TriplesMap_4a0d62ce-cca2-4a2a-94c9-5bf69a5b10cf rr:logicalTable _:node1cmg3lcr3x30 ;
+	rr:subjectMap _:node1cmg3lcr3x31 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x31 .
+
+_:node1cmg3lcr3x31 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Core.Equipment1" ;
+	rr:class <urn:default:baseUri:#Core.Equipment> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Core.Equipment1" .
+
+km-dev:PredicateObjectMap_e8f18665-8566-4ee6-af0c-363814fad029 rr:predicate <urn:default:baseUri:#IdentifiedObject.name> .
+
+_:node1cmg3lcr3x32 rr:column "component" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x32 .
+
+km-dev:PredicateObjectMap_e8f18665-8566-4ee6-af0c-363814fad029 rr:objectMap _:node1cmg3lcr3x32 .
+
+km-dev:TriplesMap_4a0d62ce-cca2-4a2a-94c9-5bf69a5b10cf rr:predicateObjectMap km-dev:PredicateObjectMap_e8f18665-8566-4ee6-af0c-363814fad029 .
+
+km-dev:PredicateObjectMap_e8f18665-8566-4ee6-af0c-363814fad029 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e8f18665-8566-4ee6-af0c-363814fad029 .
+
+km-dev:TriplesMap_2b8a94c9-eec7-4fe2-8218-bab42f790e93 a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_2b8a94c9-eec7-4fe2-8218-bab42f790e93 .
+
+km-dev:TriplesMap_2b8a94c9-eec7-4fe2-8218-bab42f790e93 km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x33 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x33 .
+
+km-dev:TriplesMap_2b8a94c9-eec7-4fe2-8218-bab42f790e93 rr:logicalTable _:node1cmg3lcr3x33 ;
+	rr:subjectMap _:node1cmg3lcr3x34 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x34 .
+
+_:node1cmg3lcr3x34 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Domain.DateTimeInterval1" ;
+	rr:class <urn:default:baseUri:#Domain.DateTimeInterval> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Domain.DateTimeInterval1" .
+
+km-dev:PredicateObjectMap_ff1f3e62-15f6-4fd7-a059-c489fb9408de rr:predicate <urn:default:baseUri:#DateTimeInterval.end> .
+
+_:node1cmg3lcr3x35 rr:column "[\"period\",\"end\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x35 .
+
+km-dev:PredicateObjectMap_ff1f3e62-15f6-4fd7-a059-c489fb9408de rr:objectMap _:node1cmg3lcr3x35 .
+
+km-dev:TriplesMap_2b8a94c9-eec7-4fe2-8218-bab42f790e93 rr:predicateObjectMap km-dev:PredicateObjectMap_ff1f3e62-15f6-4fd7-a059-c489fb9408de .
+
+km-dev:PredicateObjectMap_ff1f3e62-15f6-4fd7-a059-c489fb9408de a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ff1f3e62-15f6-4fd7-a059-c489fb9408de .
+
+km-dev:PredicateObjectMap_80b98bb3-7a63-47b7-ba4b-352414b5f993 rr:predicate <urn:default:baseUri:#DateTimeInterval.start> .
+
+_:node1cmg3lcr3x36 rr:column "[\"period\",\"begin\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x36 .
+
+km-dev:PredicateObjectMap_80b98bb3-7a63-47b7-ba4b-352414b5f993 rr:objectMap _:node1cmg3lcr3x36 .
+
+km-dev:TriplesMap_2b8a94c9-eec7-4fe2-8218-bab42f790e93 rr:predicateObjectMap km-dev:PredicateObjectMap_80b98bb3-7a63-47b7-ba4b-352414b5f993 .
+
+km-dev:PredicateObjectMap_80b98bb3-7a63-47b7-ba4b-352414b5f993 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_80b98bb3-7a63-47b7-ba4b-352414b5f993 .
+
+km-dev:TriplesMap_efebf73f-9eee-440d-ab29-4f210bac8653 a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_efebf73f-9eee-440d-ab29-4f210bac8653 .
+
+km-dev:TriplesMap_efebf73f-9eee-440d-ab29-4f210bac8653 km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x37 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x37 .
+
+km-dev:TriplesMap_efebf73f-9eee-440d-ab29-4f210bac8653 rr:logicalTable _:node1cmg3lcr3x37 ;
+	rr:subjectMap _:node1cmg3lcr3x38 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x38 .
+
+_:node1cmg3lcr3x38 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Domain.DateTimeInterval2" ;
+	rr:class <urn:default:baseUri:#Domain.DateTimeInterval> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Domain.DateTimeInterval2" .
+
+km-dev:PredicateObjectMap_c51e34f3-23bd-4148-be3c-2217d60bfb22 rr:predicate <urn:default:baseUri:#DateTimeInterval.end> .
+
+_:node1cmg3lcr3x39 rr:column "[\"period\",\"expectedEnd\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x39 .
+
+km-dev:PredicateObjectMap_c51e34f3-23bd-4148-be3c-2217d60bfb22 rr:objectMap _:node1cmg3lcr3x39 .
+
+km-dev:TriplesMap_efebf73f-9eee-440d-ab29-4f210bac8653 rr:predicateObjectMap km-dev:PredicateObjectMap_c51e34f3-23bd-4148-be3c-2217d60bfb22 .
+
+km-dev:PredicateObjectMap_c51e34f3-23bd-4148-be3c-2217d60bfb22 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c51e34f3-23bd-4148-be3c-2217d60bfb22 .
+
+km-dev:PredicateObjectMap_4aee3cf8-5bfc-4d4b-9d55-dc66b17e4862 rr:predicate <urn:default:baseUri:#DateTimeInterval.end> .
+
+_:node1cmg3lcr3x40 rr:column "[\"period\",\"plannedEnd\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x40 .
+
+km-dev:PredicateObjectMap_4aee3cf8-5bfc-4d4b-9d55-dc66b17e4862 rr:objectMap _:node1cmg3lcr3x40 .
+
+km-dev:TriplesMap_efebf73f-9eee-440d-ab29-4f210bac8653 rr:predicateObjectMap km-dev:PredicateObjectMap_4aee3cf8-5bfc-4d4b-9d55-dc66b17e4862 .
+
+km-dev:PredicateObjectMap_4aee3cf8-5bfc-4d4b-9d55-dc66b17e4862 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_4aee3cf8-5bfc-4d4b-9d55-dc66b17e4862 .
+
+km-dev:PredicateObjectMap_b8b69fe1-2278-413b-bb3c-3c9991e72eb8 rr:predicate <urn:default:baseUri:#DateTimeInterval.start> .
+
+_:node1cmg3lcr3x41 rr:column "[\"period\",\"plannedBegin\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x41 .
+
+km-dev:PredicateObjectMap_b8b69fe1-2278-413b-bb3c-3c9991e72eb8 rr:objectMap _:node1cmg3lcr3x41 .
+
+km-dev:TriplesMap_efebf73f-9eee-440d-ab29-4f210bac8653 rr:predicateObjectMap km-dev:PredicateObjectMap_b8b69fe1-2278-413b-bb3c-3c9991e72eb8 .
+
+km-dev:PredicateObjectMap_b8b69fe1-2278-413b-bb3c-3c9991e72eb8 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b8b69fe1-2278-413b-bb3c-3c9991e72eb8 .
+
+km-dev:TriplesMap_68039747-b10e-42a0-bb12-661cca96aa6f a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_68039747-b10e-42a0-bb12-661cca96aa6f .
+
+km-dev:TriplesMap_68039747-b10e-42a0-bb12-661cca96aa6f km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x42 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x42 .
+
+km-dev:TriplesMap_68039747-b10e-42a0-bb12-661cca96aa6f rr:logicalTable _:node1cmg3lcr3x42 ;
+	rr:subjectMap _:node1cmg3lcr3x43 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x43 .
+
+_:node1cmg3lcr3x43 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#Operations.ServicePointOutageSummary1" ;
+	rr:class <urn:default:baseUri:#Operations.ServicePointOutageSummary> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "Operations.ServicePointOutageSummary1" .
+
+km-dev:PredicateObjectMap_5788b996-f799-4827-a9bd-51f77fcaf91f rr:predicate <urn:default:baseUri:#ServicePointOutageSummary.totalCount> .
+
+_:node1cmg3lcr3x44 rr:column "[\"impact\",\"households\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x44 .
+
+km-dev:PredicateObjectMap_5788b996-f799-4827-a9bd-51f77fcaf91f rr:objectMap _:node1cmg3lcr3x44 .
+
+km-dev:TriplesMap_68039747-b10e-42a0-bb12-661cca96aa6f rr:predicateObjectMap km-dev:PredicateObjectMap_5788b996-f799-4827-a9bd-51f77fcaf91f .
+
+km-dev:PredicateObjectMap_5788b996-f799-4827-a9bd-51f77fcaf91f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_5788b996-f799-4827-a9bd-51f77fcaf91f .
+
+km-dev:TriplesMap_e510ea0d-1dd7-4851-9a86-b2abd4c79ddc a rr:TriplesMap .
+
+_:node1cmg3lcr3x1 km-dev:hasTriplesMap km-dev:TriplesMap_e510ea0d-1dd7-4851-9a86-b2abd4c79ddc .
+
+km-dev:TriplesMap_e510ea0d-1dd7-4851-9a86-b2abd4c79ddc km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x45 rr:tableName "100disruptions.json" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasLogicalTable _:node1cmg3lcr3x45 .
+
+km-dev:TriplesMap_e510ea0d-1dd7-4851-9a86-b2abd4c79ddc rr:logicalTable _:node1cmg3lcr3x45 ;
+	rr:subjectMap _:node1cmg3lcr3x46 .
+
+_:node1cmg3lcr3x1 km-dev:hasSubjectMap _:node1cmg3lcr3x46 .
+
+_:node1cmg3lcr3x46 km-dev:isPartOfMapping _:node1cmg3lcr3x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "urn:default:baseUri:#PaymentMetering.ServiceSupplier1" ;
+	rr:class <urn:default:baseUri:#PaymentMetering.ServiceSupplier> ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "PaymentMetering.ServiceSupplier1" .
+
+km-dev:PredicateObjectMap_ed4892b9-d3a3-440f-838b-9014e623b3db rr:predicate <urn:default:baseUri:#IdentifiedObject.name> .
+
+_:node1cmg3lcr3x47 rr:column "[\"source\",\"organisation\"]" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasObjectMap _:node1cmg3lcr3x47 .
+
+km-dev:PredicateObjectMap_ed4892b9-d3a3-440f-838b-9014e623b3db rr:objectMap _:node1cmg3lcr3x47 .
+
+km-dev:TriplesMap_e510ea0d-1dd7-4851-9a86-b2abd4c79ddc rr:predicateObjectMap km-dev:PredicateObjectMap_ed4892b9-d3a3-440f-838b-9014e623b3db .
+
+km-dev:PredicateObjectMap_ed4892b9-d3a3-440f-838b-9014e623b3db a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1cmg3lcr3x1 .
+
+_:node1cmg3lcr3x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ed4892b9-d3a3-440f-838b-9014e623b3db .
