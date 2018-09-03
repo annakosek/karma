@@ -1,0 +1,2157 @@
+{
+    "id": "100disruptions.json",
+    "name": "100disruptions.json",
+    "description": null,
+    "sourceColumns": [
+        {
+            "id": "HN43784",
+            "hNodeId": "HN43784",
+            "columnName": "component"
+        },
+        {
+            "id": "HN43850",
+            "hNodeId": "HN43850",
+            "columnName": "message"
+        },
+        {
+            "id": "HN43872",
+            "hNodeId": "HN43872",
+            "columnName": "expectedEnd"
+        },
+        {
+            "id": "HN43782",
+            "hNodeId": "HN43782",
+            "columnName": "cause"
+        },
+        {
+            "id": "HN43870",
+            "hNodeId": "HN43870",
+            "columnName": "end"
+        },
+        {
+            "id": "HN43880",
+            "hNodeId": "HN43880",
+            "columnName": "planned"
+        },
+        {
+            "id": "HN43891",
+            "hNodeId": "HN43891",
+            "columnName": "organisation"
+        },
+        {
+            "id": "HN50639",
+            "hNodeId": "HN50639",
+            "columnName": "gmlpoint"
+        },
+        {
+            "id": "HN43838",
+            "hNodeId": "HN43838",
+            "columnName": "postalCode"
+        },
+        {
+            "id": "HN43848",
+            "hNodeId": "HN43848",
+            "columnName": "maintenance"
+        },
+        {
+            "id": "HN43803",
+            "hNodeId": "HN43803",
+            "columnName": "lastUpdated"
+        },
+        {
+            "id": "HN43836",
+            "hNodeId": "HN43836",
+            "columnName": "city"
+        },
+        {
+            "id": "HN43868",
+            "hNodeId": "HN43868",
+            "columnName": "begin"
+        },
+        {
+            "id": "HN43901",
+            "hNodeId": "HN43901",
+            "columnName": "titel"
+        },
+        {
+            "id": "HN43899",
+            "hNodeId": "HN43899",
+            "columnName": "status"
+        },
+        {
+            "id": "HN43876",
+            "hNodeId": "HN43876",
+            "columnName": "plannedEnd"
+        },
+        {
+            "id": "HN43842",
+            "hNodeId": "HN43842",
+            "columnName": "street"
+        },
+        {
+            "id": "HN43897",
+            "hNodeId": "HN43897",
+            "columnName": "timestamp"
+        },
+        {
+            "id": "HN43786",
+            "hNodeId": "HN43786",
+            "columnName": "id"
+        },
+        {
+            "id": "HN43797",
+            "hNodeId": "HN43797",
+            "columnName": "households"
+        },
+        {
+            "id": "HN43874",
+            "hNodeId": "HN43874",
+            "columnName": "plannedBegin"
+        }
+    ],
+    "mappingToSourceColumns": [
+        {
+            "id": "HN43784",
+            "sourceColumnId": "HN43784"
+        },
+        {
+            "id": "HN43850",
+            "sourceColumnId": "HN43850"
+        },
+        {
+            "id": "HN43872",
+            "sourceColumnId": "HN43872"
+        },
+        {
+            "id": "HN43782",
+            "sourceColumnId": "HN43782"
+        },
+        {
+            "id": "HN43870",
+            "sourceColumnId": "HN43870"
+        },
+        {
+            "id": "HN43880",
+            "sourceColumnId": "HN43880"
+        },
+        {
+            "id": "HN43891",
+            "sourceColumnId": "HN43891"
+        },
+        {
+            "id": "HN50639",
+            "sourceColumnId": "HN50639"
+        },
+        {
+            "id": "HN43838",
+            "sourceColumnId": "HN43838"
+        },
+        {
+            "id": "HN43848",
+            "sourceColumnId": "HN43848"
+        },
+        {
+            "id": "HN43803",
+            "sourceColumnId": "HN43803"
+        },
+        {
+            "id": "HN43836",
+            "sourceColumnId": "HN43836"
+        },
+        {
+            "id": "HN43868",
+            "sourceColumnId": "HN43868"
+        },
+        {
+            "id": "HN43901",
+            "sourceColumnId": "HN43901"
+        },
+        {
+            "id": "HN43899",
+            "sourceColumnId": "HN43899"
+        },
+        {
+            "id": "HN43876",
+            "sourceColumnId": "HN43876"
+        },
+        {
+            "id": "HN43842",
+            "sourceColumnId": "HN43842"
+        },
+        {
+            "id": "HN43897",
+            "sourceColumnId": "HN43897"
+        },
+        {
+            "id": "HN43786",
+            "sourceColumnId": "HN43786"
+        },
+        {
+            "id": "HN43797",
+            "sourceColumnId": "HN43797"
+        },
+        {
+            "id": "HN43874",
+            "sourceColumnId": "HN43874"
+        }
+    ],
+    "graph": {
+        "nodes": [
+            {
+                "id": "urn:default:baseUri:#Common.Location1",
+                "label": {
+                    "uri": "urn:default:baseUri:#Common.Location",
+                    "rdfsLabel": "Location"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Common.StreetAddress1",
+                "label": {
+                    "uri": "urn:default:baseUri:#Common.StreetAddress",
+                    "rdfsLabel": "StreetAddress"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Common.TownDetail1",
+                "label": {
+                    "uri": "urn:default:baseUri:#Common.TownDetail",
+                    "rdfsLabel": "TownDetail"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Common.StreetDetail1",
+                "label": {
+                    "uri": "urn:default:baseUri:#Common.StreetDetail",
+                    "rdfsLabel": "StreetDetail"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Incident1",
+                "label": {
+                    "uri": "urn:default:baseUri:#Operations.Incident",
+                    "rdfsLabel": "Incident"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1",
+                "label": {
+                    "uri": "urn:default:baseUri:#Operations.Outage",
+                    "rdfsLabel": "Outage"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "http://www.opengis.net/ont/sf#Point1",
+                "label": {
+                    "uri": "http://www.opengis.net/ont/sf#Point",
+                    "rdfsLabel": "Point"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Common.Status1",
+                "label": {
+                    "uri": "urn:default:baseUri:#Common.Status",
+                    "rdfsLabel": "Status"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Core.Equipment1",
+                "label": {
+                    "uri": "urn:default:baseUri:#Core.Equipment",
+                    "rdfsLabel": "Equipment"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Domain.DateTimeInterval1",
+                "label": {
+                    "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                    "rdfsLabel": "DateTimeInterval"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Domain.DateTimeInterval2",
+                "label": {
+                    "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                    "rdfsLabel": "DateTimeInterval"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.ServicePointOutageSummary1",
+                "label": {
+                    "uri": "urn:default:baseUri:#Operations.ServicePointOutageSummary",
+                    "rdfsLabel": "ServicePointOutageSummary"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#PaymentMetering.ServiceSupplier1",
+                "label": {
+                    "uri": "urn:default:baseUri:#PaymentMetering.ServiceSupplier",
+                    "rdfsLabel": "ServiceSupplier"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "HN43784",
+                "label": {
+                    "uri": "HN43784",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43784",
+                "columnName": "component",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43784",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Core.Equipment",
+                            "rdfsLabel": "Equipment"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43784",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Core.Equipment",
+                            "rdfsLabel": "Equipment"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43784",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Core.Equipment",
+                            "rdfsLabel": "Equipment"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43784",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Core.Equipment",
+                            "rdfsLabel": "Equipment"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43850",
+                "label": {
+                    "uri": "HN43850",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43850",
+                "columnName": "message",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43850",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.description",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43850",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.description",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43850",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.description",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43850",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.description",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43872",
+                "label": {
+                    "uri": "HN43872",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43872",
+                "columnName": "expectedEnd",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43872",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43872",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43872",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43872",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43782",
+                "label": {
+                    "uri": "HN43782",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43782",
+                "columnName": "cause",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43782",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.cause",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43782",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.cause",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43782",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.cause",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43782",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.cause",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43870",
+                "label": {
+                    "uri": "HN43870",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43870",
+                "columnName": "end",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43870",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43870",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43870",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43870",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43880",
+                "label": {
+                    "uri": "HN43880",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43880",
+                "columnName": "planned",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43880",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.isPlanned",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43880",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.isPlanned",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43880",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.isPlanned",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43880",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.isPlanned",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43891",
+                "label": {
+                    "uri": "HN43891",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43891",
+                "columnName": "organisation",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43891",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#PaymentMetering.ServiceSupplier",
+                            "rdfsLabel": "ServiceSupplier"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43891",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#PaymentMetering.ServiceSupplier",
+                            "rdfsLabel": "ServiceSupplier"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43891",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#PaymentMetering.ServiceSupplier",
+                            "rdfsLabel": "ServiceSupplier"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43891",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#PaymentMetering.ServiceSupplier",
+                            "rdfsLabel": "ServiceSupplier"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#IdentifiedObject.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN50639",
+                "label": {
+                    "uri": "HN50639",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN50639",
+                "columnName": "gmlpoint",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN50639",
+                        "domain": {
+                            "uri": "http://www.opengis.net/ont/sf#Point",
+                            "rdfsLabel": "Point"
+                        },
+                        "type": {
+                            "uri": "http://www.opengis.net/ont/geosparql#asGML",
+                            "rdfsLabel": "asGML"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN50639",
+                        "domain": {
+                            "uri": "http://www.opengis.net/ont/sf#Point",
+                            "rdfsLabel": "Point"
+                        },
+                        "type": {
+                            "uri": "http://www.opengis.net/ont/geosparql#asGML",
+                            "rdfsLabel": "asGML"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN50639",
+                        "domain": {
+                            "uri": "http://www.opengis.net/ont/sf#Point",
+                            "rdfsLabel": "Point"
+                        },
+                        "type": {
+                            "uri": "http://www.opengis.net/ont/geosparql#asGML",
+                            "rdfsLabel": "asGML"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN50639",
+                        "domain": {
+                            "uri": "http://www.opengis.net/ont/sf#Point",
+                            "rdfsLabel": "Point"
+                        },
+                        "type": {
+                            "uri": "http://www.opengis.net/ont/geosparql#asGML",
+                            "rdfsLabel": "asGML"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43838",
+                "label": {
+                    "uri": "HN43838",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43838",
+                "columnName": "postalCode",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43838",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.StreetAddress",
+                            "rdfsLabel": "StreetAddress"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#StreetAddress.postalCode",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43838",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.StreetAddress",
+                            "rdfsLabel": "StreetAddress"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#StreetAddress.postalCode",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43838",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.StreetAddress",
+                            "rdfsLabel": "StreetAddress"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#StreetAddress.postalCode",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43838",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.StreetAddress",
+                            "rdfsLabel": "StreetAddress"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#StreetAddress.postalCode",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43848",
+                "label": {
+                    "uri": "HN43848",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43848",
+                "columnName": "maintenance",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43848",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.isPlanned",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43848",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.isPlanned",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43848",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.isPlanned",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43848",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Outage.isPlanned",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43803",
+                "label": {
+                    "uri": "HN43803",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43803",
+                "columnName": "lastUpdated",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43803",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.lastModifiedDateTime",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43803",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.lastModifiedDateTime",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43803",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.lastModifiedDateTime",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43803",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.lastModifiedDateTime",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43836",
+                "label": {
+                    "uri": "HN43836",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43836",
+                "columnName": "city",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43836",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.TownDetail",
+                            "rdfsLabel": "TownDetail"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#TownDetail.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43836",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.TownDetail",
+                            "rdfsLabel": "TownDetail"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#TownDetail.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43836",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.TownDetail",
+                            "rdfsLabel": "TownDetail"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#TownDetail.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43836",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.TownDetail",
+                            "rdfsLabel": "TownDetail"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#TownDetail.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43868",
+                "label": {
+                    "uri": "HN43868",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43868",
+                "columnName": "begin",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43868",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.start",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43868",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.start",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43868",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.start",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43868",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.start",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43901",
+                "label": {
+                    "uri": "HN43901",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43901",
+                "columnName": "titel",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43901",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.title",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43901",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.title",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43901",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.title",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43901",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.title",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43899",
+                "label": {
+                    "uri": "HN43899",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43899",
+                "columnName": "status",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43899",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.Status",
+                            "rdfsLabel": "Status"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Status.value",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43899",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.Status",
+                            "rdfsLabel": "Status"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Status.value",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43899",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.Status",
+                            "rdfsLabel": "Status"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Status.value",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43899",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.Status",
+                            "rdfsLabel": "Status"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Status.value",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43876",
+                "label": {
+                    "uri": "HN43876",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43876",
+                "columnName": "plannedEnd",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43876",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43876",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43876",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43876",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43842",
+                "label": {
+                    "uri": "HN43842",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43842",
+                "columnName": "street",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43842",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.StreetDetail",
+                            "rdfsLabel": "StreetDetail"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#StreetDetail.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43842",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.StreetDetail",
+                            "rdfsLabel": "StreetDetail"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#StreetDetail.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43842",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.StreetDetail",
+                            "rdfsLabel": "StreetDetail"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#StreetDetail.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43842",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Common.StreetDetail",
+                            "rdfsLabel": "StreetDetail"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#StreetDetail.name",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43897",
+                "label": {
+                    "uri": "HN43897",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43897",
+                "columnName": "timestamp",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43897",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.createdDateTime",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43897",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.createdDateTime",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43897",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.createdDateTime",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43897",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#Document.createdDateTime",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43786",
+                "label": {
+                    "uri": "HN43786",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43786",
+                "columnName": "id",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43786",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43786",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43786",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43786",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.Outage",
+                            "rdfsLabel": "Outage"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43797",
+                "label": {
+                    "uri": "HN43797",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43797",
+                "columnName": "households",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43797",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.ServicePointOutageSummary",
+                            "rdfsLabel": "ServicePointOutageSummary"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#ServicePointOutageSummary.totalCount",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43797",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.ServicePointOutageSummary",
+                            "rdfsLabel": "ServicePointOutageSummary"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#ServicePointOutageSummary.totalCount",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43797",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.ServicePointOutageSummary",
+                            "rdfsLabel": "ServicePointOutageSummary"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#ServicePointOutageSummary.totalCount",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43797",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Operations.ServicePointOutageSummary",
+                            "rdfsLabel": "ServicePointOutageSummary"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#ServicePointOutageSummary.totalCount",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN43874",
+                "label": {
+                    "uri": "HN43874",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN43874",
+                "columnName": "plannedBegin",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN43874",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.start",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43874",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.start",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43874",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.start",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN43874",
+                        "domain": {
+                            "uri": "urn:default:baseUri:#Domain.DateTimeInterval",
+                            "rdfsLabel": "DateTimeInterval"
+                        },
+                        "type": {
+                            "uri": "urn:default:baseUri:#DateTimeInterval.start",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            }
+        ],
+        "links": [
+            {
+                "id": "urn:default:baseUri:#Common.Location1---urn:default:baseUri:#Location.mainAddress---urn:default:baseUri:#Common.StreetAddress1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Location.mainAddress",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "Direct",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Common.Location1---urn:default:baseUri:#StreetAddress.townDetail---urn:default:baseUri:#Common.TownDetail1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#StreetAddress.townDetail",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "None",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Common.StreetAddress1---urn:default:baseUri:#StreetAddress.streetDetail---urn:default:baseUri:#Common.StreetDetail1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#StreetAddress.streetDetail",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "Direct",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Incident1---http://www.purl.org/EnergyAlert/ExtensionOntology#Incident_Location---urn:default:baseUri:#Common.Location1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "http://www.purl.org/EnergyAlert/ExtensionOntology#Incident_Location",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "Direct",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---http://www.opengis.net/ont/geosparql#hasGeometry---http://www.opengis.net/ont/sf#Point1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "http://www.opengis.net/ont/geosparql#hasGeometry",
+                    "rdfsLabel": "hasGeometry"
+                },
+                "objectPropertyType": "None",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Document.status---urn:default:baseUri:#Common.Status1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Document.status",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "Indirect",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---http://www.purl.org/EnergyAlert/ExtensionOntology#Outage_Equipments---urn:default:baseUri:#Core.Equipment1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "http://www.purl.org/EnergyAlert/ExtensionOntology#Outage_Equipments",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "Direct",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Outage.actualPeriod---urn:default:baseUri:#Domain.DateTimeInterval1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Outage.actualPeriod",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "Direct",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Outage.estimatedPeriod---urn:default:baseUri:#Domain.DateTimeInterval2",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Outage.estimatedPeriod",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "Direct",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Outage_Incident---urn:default:baseUri:#Operations.Incident1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Outage_Incident",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "None",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Outage.summary---urn:default:baseUri:#Operations.ServicePointOutageSummary1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Outage.summary",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "Direct",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---http://www.purl.org/EnergyAlert/ExtensionOntology#Outage_ServiceSupplier---urn:default:baseUri:#PaymentMetering.ServiceSupplier1",
+                "weight": 0.009999999776482582,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "http://www.purl.org/EnergyAlert/ExtensionOntology#Outage_ServiceSupplier",
+                    "rdfsLabel": null
+                },
+                "objectPropertyType": "Direct",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Core.Equipment1---urn:default:baseUri:#IdentifiedObject.name---HN43784",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#IdentifiedObject.name",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#IdentifiedObject.description---HN43850",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#IdentifiedObject.description",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Domain.DateTimeInterval2---urn:default:baseUri:#DateTimeInterval.end---HN43872",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Outage.cause---HN43782",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Outage.cause",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Domain.DateTimeInterval1---urn:default:baseUri:#DateTimeInterval.end---HN43870",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Outage.isPlanned---HN43880",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Outage.isPlanned",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#PaymentMetering.ServiceSupplier1---urn:default:baseUri:#IdentifiedObject.name---HN43891",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#IdentifiedObject.name",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://www.opengis.net/ont/sf#Point1---http://www.opengis.net/ont/geosparql#asGML---HN50639",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://www.opengis.net/ont/geosparql#asGML",
+                    "rdfsLabel": "asGML"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Common.StreetAddress1---urn:default:baseUri:#StreetAddress.postalCode---HN43838",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#StreetAddress.postalCode",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Outage.isPlanned---HN43848",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Outage.isPlanned",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Document.lastModifiedDateTime---HN43803",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Document.lastModifiedDateTime",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Common.TownDetail1---urn:default:baseUri:#TownDetail.name---HN43836",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#TownDetail.name",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Domain.DateTimeInterval1---urn:default:baseUri:#DateTimeInterval.start---HN43868",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#DateTimeInterval.start",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Document.title---HN43901",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Document.title",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Common.Status1---urn:default:baseUri:#Status.value---HN43899",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Status.value",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Domain.DateTimeInterval2---urn:default:baseUri:#DateTimeInterval.end---HN43876",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#DateTimeInterval.end",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Common.StreetDetail1---urn:default:baseUri:#StreetDetail.name---HN43842",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#StreetDetail.name",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---urn:default:baseUri:#Document.createdDateTime---HN43897",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#Document.createdDateTime",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.Outage1---http://isi.edu/integration/karma/dev#classLink---HN43786",
+                "weight": 0.01,
+                "type": "ClassInstanceLink",
+                "label": {
+                    "uri": "http://isi.edu/integration/karma/dev#classLink",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "UriOfInstance",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Operations.ServicePointOutageSummary1---urn:default:baseUri:#ServicePointOutageSummary.totalCount---HN43797",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#ServicePointOutageSummary.totalCount",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "urn:default:baseUri:#Domain.DateTimeInterval2---urn:default:baseUri:#DateTimeInterval.start---HN43874",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "urn:default:baseUri:#DateTimeInterval.start",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            }
+        ]
+    }
+}
